@@ -1,0 +1,22 @@
+name = openEuler
+release = 22
+
+gpg_key =  gpg/RPM-GPG-KEY-openEuler-22
+gpg_key ?= gpg/RPM-GPG-KEY-openEuler-Security-22
+
+packages = packages/${suite}.list
+
+[post_install]
+#finalize = scripts/fix_rpmdb.py
+finalize = scripts/clean_yumbootstrap.py
+
+[repositories]
+openeuler         = https://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-22.03-LTS/OS/$basearch/
+openeuler-updates = https://mirrors.tuna.tsinghua.edu.cn/openeuler/openEuler-22.03-LTS/update/$basearch/
+
+[environment]
+#PYTHONPATH=...
+#PYTHONPATH
+#SUDO_*
+
+# vim:ft=dosini
