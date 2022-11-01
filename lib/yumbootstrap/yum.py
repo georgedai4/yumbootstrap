@@ -4,9 +4,9 @@ import rpm as rpm_mod
 import os
 import shutil
 
-import bdb
-import sh
-import fs
+from . import bdb
+from . import sh
+from . import fs
 
 import logging
 logger = logging.getLogger("yum")
@@ -155,7 +155,7 @@ class Yum:
         chroot = self.chroot,
         pipe = sh.READ,
         env = self.yum_conf.env,
-      ).strip()
+      ).strip().decode("utf-8")
 
     # input directory
     rpmdb_dir = os.path.join(self.chroot, current_rpmdb_dir.lstrip('/'))

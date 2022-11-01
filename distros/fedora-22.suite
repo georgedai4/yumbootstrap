@@ -7,7 +7,7 @@ gpg_key =  gpg/RPM-GPG-KEY-fedora-22-secondary
 packages = packages/${suite}.list
 
 [post_install]
-finalize = scripts/fix_rpmdb.py
+#finalize = scripts/fix_rpmdb.py
 finalize = scripts/clean_yumbootstrap.py
 
 [repositories]

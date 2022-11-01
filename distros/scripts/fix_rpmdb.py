@@ -1,8 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
-import os
+import os,sys
 import time
 import logging
+sys.path.insert(0, '/root/project/yumbootstrap/lib')
 import yumbootstrap.yum
 import yumbootstrap.log
 

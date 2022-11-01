@@ -2,7 +2,7 @@
 
 import os
 import subprocess
-from exceptions import YBError
+from yumbootstrap.exceptions import YBError
 
 READ  = object() # read from
 WRITE = object() # write to

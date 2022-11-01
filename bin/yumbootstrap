@@ -425,7 +425,7 @@ try:
 except KeyboardInterrupt:
   pass
 except YBError as e:
-  print >>sys.stderr, e
+  print(e, file=sys.stderr)
   sys.exit(e.code)
 
 #-----------------------------------------------------------------------------
